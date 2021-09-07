@@ -8,7 +8,7 @@ if number < 0:
         numbermod = numbermod * -1
 else:
         numbermod = number % 10
-        print('Last digit of {:d} is'.format(number), end=" ")
+print('Last digit of {:d} is'.format(number), end=" ")
 if numbermod == 0:
         print('is {:d} and is 0'.format(numbermod))
 elif numbermod < 6:

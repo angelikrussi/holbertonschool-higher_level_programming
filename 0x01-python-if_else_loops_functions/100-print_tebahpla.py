@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-def remove_char_at(str, n):
-    if (n >= 0):
-        return str[:n] + str[n + 1:]
-    else:
-        return str
+for letter in range(ord('z'), ord('a') - 1, -1):
+    if letter % 2 == 1:
+        letter = letter - 32
+    print("{:s}".format(chr(letter)), end="")

@@ -1,11 +1,12 @@
 #!/usr/bin/python3
-"""Defines a class Rectangle"""
+'''Write a class Rectangle that defines a
+rectangle by: (based on 0-rectangle.py)'''
 
 
 class Rectangle:
-    """An empty Square Rectangle"""
+    '''class Rectangle'''
     def __init__(self, width=0, height=0):
-        "initilizes"
+        '''Initializes the instance'''
         self.width = width
         self.height = height
 

@@ -1,6 +1,7 @@
 #!/usr/bin/python3
+"""Contains the lookup function"""
+
 
 def lookup(obj):
-    
-    for i in range (obj):
-        return i
+     """Looks up the objects attributes"""
+     return dir(obj)

@@ -1,9 +1,9 @@
 #!/usr/bin/node
 const lA = process.argv[2];
-if (!loopArgs) {
+if (!lA) {
   console.log('Missing number of occurrences');
 } else {
-  for (let x = 0; x < loopArgs; x++) {
+  for (let x = 0; x < lA; x++) {
     console.log('C is fun');
-    }
+  }
 }

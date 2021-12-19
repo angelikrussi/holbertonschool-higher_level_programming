@@ -11,12 +11,14 @@ if __name__ == "__main__":
     db = MySQLdb.connect(user=argv[1],
                          passwd=argv[2],
                          db=argv[3])
-    cursor = db.cursor()
-    cursor.execute("SELECT * from states\
+    name = argv[4]
+    cr = db.cursor()
+    cr.execute("SELECT * from states\
                 WHERE name LIKE '{}' COLLATE latin1_general_cs\
                 ORDER BY states.id".format(argv[4]))
-    search = cursor.fetchall()
+    search = cr.fetchall()
     for count in search:
-        print(count)
-    cursor.close()
+        if i[1] == name:
+            print(count)
+    cr.close()
     db.close()

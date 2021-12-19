@@ -12,13 +12,11 @@ if __name__ == "__main__":
                          passwd=argv[2],
                          db=argv[3])
     name = argv[4]
-    cr = db.cursor()
-    cr.execute("SELECT * from states\
-                WHERE name LIKE '{}' COLLATE latin1_general_cs\
-                ORDER BY states.id".format(argv[4]))
-    search = cr.fetchall()
+    cursor = db.cursor()
+    cursor.execute(""""SELECT * FROM states ORDER BY id ASC""".format(name))
+    search = cursor.fetchall()
     for count in search:
         if i[1] == name:
             print(count)
-    cr.close()
+    cursor.close()
     db.close()

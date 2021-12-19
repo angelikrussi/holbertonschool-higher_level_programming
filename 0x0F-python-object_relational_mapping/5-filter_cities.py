@@ -11,18 +11,18 @@ if __name__ == "__main__":
     db = MySQLdb.connect(user=argv[1],
                          passwd=argv[2],
                          db=argv[3])
-    cr = db.cursor()
-    cr.execute("SELECT cities.name FROM cities\
+    cursor = db.cursor()
+    cursor.execute("SELECT cities.name FROM cities\
                 INNER JOIN states ON cities.state_id = states.id\
                 WHERE states.name = %s\
                 ORDER BY cities.id", (argv[4], ))
-    cities = cr.fetchall()
+    places = cursor.fetchall()
     first = 0
-    for city in cities:
+    for count in places:
         if first != 0:
             print(", ", end="")
-        print("%s" % city, end="")
+        print("%s" % count, end="")
         first += 1
     print("")
-    cr.close()
+    cursor.close()
     db.close()

@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-'''
-Takes in an argument and displays all values in the states table
-of hbtn_0e_0_usa where name matches the argument
-'''
+"""takes in an argument and displays all values in the states"""
 
 
 if __name__ == "__main__":
@@ -13,10 +10,13 @@ if __name__ == "__main__":
                          db=argv[3])
     name = argv[4]
     cursor = db.cursor()
-    cursor.execute(""""SELECT * FROM states ORDER BY id ASC""".format(name))
+    cursor.execute("""SELECT * FROM states ORDER BY id ASC""".format(name))
+
     search = cursor.fetchall()
+
     for count in search:
-        if i[1] == name:
+        if count[1] == name:
             print(count)
+
     cursor.close()
     db.close()

@@ -4,9 +4,9 @@
 
 def find_peak(list_of_integers):
     """funtion finds a peak """
-    list = list_of_integers
-    if list:
-        list.sort()
-        return list[-1]
+    l = list_of_integers
+    if l:
+        l.sort()
+        return l[-1]
     else:
         return None

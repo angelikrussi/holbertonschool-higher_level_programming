@@ -5,6 +5,7 @@
 
 
 def find_peak(list_of_integers):
+    """function Find a peak"""
     list = list_of_integers
     if list:
         list.sort()

@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" task 0 module """
+""" script that fetches """
 import urllib.request
 
 with urllib.request.urlopen('https://intranet.hbtn.io/status') as response:

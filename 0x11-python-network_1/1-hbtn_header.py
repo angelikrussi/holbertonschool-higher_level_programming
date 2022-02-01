@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" task 0 module """
+""" script that takes in a URL and displays the value of the X-Request-Id """
 import urllib.request
 import sys
 

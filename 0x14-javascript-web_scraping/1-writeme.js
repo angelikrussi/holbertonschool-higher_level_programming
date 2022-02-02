@@ -1,10 +1,10 @@
 #!/usr/bin/node
 
 const fs = require('fs');
-const Filefirst = process.argv[2];
-const Filesecond = process.argv[2];
+const Filefirt = process.argv[2];
+const Filesecond = process.argv[3];
 
-fs.writeFile(Filefirst, Filesecond, function (err, data) {
+fs.writeFile(Filefirt, Filesecond, function (err) {
   if (err) {
     console.log(err);
   }
